@@ -12,9 +12,10 @@ steps:
     options: -b "build-11.gradle"
     tasks: clean build
 
-- bash: ls $(Build.SourcesDirectory)
-- bash: ls $(Build.SourcesDirectory)/build
-- bash: ls $(Build.SourcesDirectory)/build/libs
+- bash: ls -la $(Build.SourcesDirectory)
+- bash: ls -la $(Build.SourcesDirectory)/build
+- bash: ls -la $(Build.SourcesDirectory)/build/libs
+- bash: ls -la $(Build.SourcesDirectory)/build/java11
 
 
 # - publish: $(Build.SourcesDirectory)/build/libs/*.jar
