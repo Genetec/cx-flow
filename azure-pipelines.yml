@@ -18,6 +18,12 @@ steps:
 # - bash: ls -la $(Build.SourcesDirectory)/build/libs/java11
 
 
-- publish: $(Build.SourcesDirectory)/build/libs/java11/*.jar
-  displayName: Publish *.jar
-  artifact: output
+# - publish: $(Build.SourcesDirectory)/build/libs/java11/*.jar
+#   displayName: Publish *.jar
+#   artifact: output
+
+- task: PublishPipelineArtifact@1
+  displayName: "Publish Build Directory"
+  inputs:
+    targetPath: "$(Build.SourcesDirectory)/build/libs/java11"
+    artifact: output
