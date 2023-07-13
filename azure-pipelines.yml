@@ -15,7 +15,7 @@ steps:
 - bash: ls -la $(Build.SourcesDirectory)
 - bash: ls -la $(Build.SourcesDirectory)/build
 - bash: ls -la $(Build.SourcesDirectory)/build/libs
-- bash: ls -la $(Build.SourcesDirectory)/build/java11
+- bash: ls -la $(Build.SourcesDirectory)/build/libs/java11
 
 
 # - publish: $(Build.SourcesDirectory)/build/libs/*.jar
