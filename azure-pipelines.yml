@@ -1,0 +1,13 @@
+trigger:
+- develop
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Gradle@3
+  displayName: Build
+  inputs:
+    gradleWrapperFile: 'gradlew'
+    options: -b "build-11.gradle"
+    tasks: clean build
