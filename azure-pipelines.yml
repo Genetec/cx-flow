@@ -12,6 +12,11 @@ steps:
     options: -b "build-11.gradle"
     tasks: clean build
 
-- publish: $(Build.SourcesDirectory)/build/libs/*.jar
-  displayName: Publish *.jar
-  artifact: output
+- bash: ls $(Build.SourcesDirectory)
+- bash: ls $(Build.SourcesDirectory)/build
+- bash: ls $(Build.SourcesDirectory)/build/libs
+
+
+# - publish: $(Build.SourcesDirectory)/build/libs/*.jar
+#   displayName: Publish *.jar
+#   artifact: output
