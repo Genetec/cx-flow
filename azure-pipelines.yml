@@ -12,16 +12,6 @@ steps:
     options: -b "build-11.gradle"
     tasks: clean build
 
-# - bash: ls -la $(Build.SourcesDirectory)
-# - bash: ls -la $(Build.SourcesDirectory)/build
-# - bash: ls -la $(Build.SourcesDirectory)/build/libs
-# - bash: ls -la $(Build.SourcesDirectory)/build/libs/java11
-
-
-# - publish: $(Build.SourcesDirectory)/build/libs/java11/*.jar
-#   displayName: Publish *.jar
-#   artifact: output
-
 - task: PublishPipelineArtifact@1
   displayName: "Publish Build Directory"
   inputs:
